@@ -10,6 +10,8 @@ gem 'thin'
 
 gem 'mysql2'
 
+gem 'gchartrb'
+gem "googlecharts", :require => "gchart"
 
 gem 'prawn'
 

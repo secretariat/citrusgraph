@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Legend:</b>
+  <%= @diagram.legend %>
+</p>
+
+<p>
+  <b>Val:</b>
+  <%= @diagram.val %>
+</p>
+
+
+<%= link_to 'Edit', edit_diagram_path(@diagram) %> |
+<%= link_to 'Back', diagrams_path %>

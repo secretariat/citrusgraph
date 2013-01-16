@@ -1,0 +1,40 @@
+<h1>Listing diagrams</h1>
+
+<table>
+  <tr>
+    <th>Legend</th>
+    <th>Val</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @diagrams.each do |diagram| %>
+  <tr>
+    <td><%= diagram.legend %></td>
+    <td><%= diagram.val %></td>
+    <td><%= link_to 'Show', diagram %></td>
+    <td><%= link_to 'Edit', edit_diagram_path(diagram) %></td>
+    <td><%= link_to 'Destroy', diagram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Diagram', new_diagram_path %>
+
+<hr>
+
+Total: <%= get_total(@diagrams) %>
+
+
+<hr>
+<img src="<%= get_diagram_url(@diagrams,"Opinion") %>"/>
+
+<hr>
+<img src="<%= get_diagram_url_pie(@diagrams,"Opinion") %>"/>
+<hr>
+<img alt="get_diagram_url_horbar" src="<%= get_diagram_url_horbar(@diagrams,"Opinion") %>"/>
+<hr>
+<hr>
